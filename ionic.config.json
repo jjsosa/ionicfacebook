@@ -1,0 +1,8 @@
+{
+  "name": "ionicfacebook",
+  "app_id": "ca7948d5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
