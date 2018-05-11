@@ -85,6 +85,6 @@
         <variable name="APP_ID" value="2172740692743795" />
         <variable name="APP_NAME" value="IonicApp" />
     </plugin>
-    <engine name="android" spec="~7.0.0" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="android" spec="7.0.0" />
+    <engine name="ios" spec="4.5.4" />
 </widget>
