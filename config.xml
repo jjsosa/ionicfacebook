@@ -81,10 +81,13 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
-    <plugin name="cordova-plugin-facebook4" spec="^2.1.0">
+    <plugin name="cordova-android-support-gradle-release" spec="^1.4.2">
+        <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
+    </plugin>
+    <engine name="ios" spec="~4.5.4" />
+    <plugin name="cordova-plugin-facebook4" spec="https://github.com/amritk/cordova-plugin-facebook4">
         <variable name="APP_ID" value="2172740692743795" />
         <variable name="APP_NAME" value="IonicApp" />
     </plugin>
-    <engine name="android" spec="7.0.0" />
-    <engine name="ios" spec="4.5.4" />
+    <engine name="android" spec="~7.0.0" />
 </widget>
