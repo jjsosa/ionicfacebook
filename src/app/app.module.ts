@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Facebook } from '@ionic-native/facebook';
+import { MyProfilePage } from '../pages/my-profile/my-profile';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Facebook } from '@ionic-native/facebook';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MyProfilePage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { Facebook } from '@ionic-native/facebook';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MyProfilePage
   ],
   providers: [
     StatusBar,

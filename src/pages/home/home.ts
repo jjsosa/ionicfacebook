@@ -34,6 +34,7 @@ export class HomePage {
       })
       .catch(e => console.log('Error logging into Facebook', e));
   }
+  
   getUserInformation() {
     this.fb.getLoginStatus().then((response) => {
       if (response.status == 'connected') {
@@ -42,6 +43,11 @@ export class HomePage {
           this._gender = JSON.parse(JSON.stringify(response)).gender;
           this._firstName = JSON.parse(JSON.stringify(response)).id;
           this._lastName = JSON.parse(JSON.stringify(response)).last_name;
+          console.log(this._name);
+          console.log(this._firstName);
+          console.log(this._lastName);
+          console.log(this._gender);
+          console.log(this._data);
         }, (error) => {
           alert(error);
         })
