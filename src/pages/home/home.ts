@@ -13,6 +13,7 @@ export class HomePage {
   }
 
   public userId: string;
+  _id: String;
   _firstName: String;
   _gender: String;
   _lastName: String;
@@ -22,15 +23,9 @@ export class HomePage {
   login() {
     this.fb.login(['public_profile', 'user_friends', 'email'])
       .then((res: FacebookLoginResponse) => {
-        this.userId = res.authResponse.userID
+        this.userId = res.authResponse.userID;
+        console.log(res);
         this.getUserInformation();
-        this.navCtrl.push('MyprofilePage', {
-          firstName: this._firstName,
-          lastName: this._lastName,
-          name: this._name,
-          gender: this._gender,
-          data:this._data
-        })
       })
       .catch(e => console.log('Error logging into Facebook', e));
   }
@@ -41,13 +36,15 @@ export class HomePage {
         this.fb.api('/' + response.authResponse.userID + '?fields=id,name,gender,first_name,last_name', []).then((response) => {
           this._name = JSON.parse(JSON.stringify(response)).name;
           this._gender = JSON.parse(JSON.stringify(response)).gender;
-          this._firstName = JSON.parse(JSON.stringify(response)).id;
+          this._id = JSON.parse(JSON.stringify(response)).id;
+          this._firstName = JSON.parse(JSON.stringify(response)).first_name;
           this._lastName = JSON.parse(JSON.stringify(response)).last_name;
-          console.log(this._name);
-          console.log(this._firstName);
-          console.log(this._lastName);
-          console.log(this._gender);
-          console.log(this._data);
+          console.log(response);
+          console.log("Name: " + this._name);
+          console.log("First Name: " + this._firstName);
+          console.log("Last Name: " + this._lastName);
+          console.log("Gender: " + this._gender);
+          console.log("ID: " + this._id);
         }, (error) => {
           alert(error);
         })

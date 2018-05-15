@@ -3,7 +3,7 @@
     <name>ionicfacebook</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.56.1:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -84,10 +84,11 @@
     <plugin name="cordova-android-support-gradle-release" spec="^1.4.2">
         <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
     </plugin>
-    <engine name="ios" spec="~4.5.4" />
     <plugin name="cordova-plugin-facebook4" spec="https://github.com/amritk/cordova-plugin-facebook4">
         <variable name="APP_ID" value="2172740692743795" />
         <variable name="APP_NAME" value="IonicApp" />
     </plugin>
-    <engine name="android" spec="~7.0.0" />
+    <allow-navigation href="http://192.168.56.1:8100" />
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="7.0.0" />
 </widget>
